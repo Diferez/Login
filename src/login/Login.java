@@ -5,11 +5,14 @@
  */
 package login;
 
+import java.io.IOException;
 import javafx.geometry.Insets;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -56,8 +59,24 @@ public class Login extends Application {
         public void handle(ActionEvent e) {
             actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Sign in button pressed");
-            primaryStage.close();
-            Interfase.main(args);
+            
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Interf.fxml"));
+            try {
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            }
+            catch( IOException exception) {
+            throw new RuntimeException( exception);
+            }
+            
+            
+            
+            //primaryStage.close();
+            
+            
         }
 });
         
@@ -86,7 +105,7 @@ public class Login extends Application {
         
         
         
-        grid.setGridLinesVisible(true);
+        //grid.setGridLinesVisible(true);
         
        
         
