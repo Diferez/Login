@@ -6,6 +6,7 @@
 package login;
 
 import java.io.IOException;
+import java.sql.Connection;
 import javafx.geometry.Insets;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -25,12 +26,18 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
+import oracle.jdbc.OraclePreparedStatement;
+import oracle.jdbc.OracleResultSet;
 
 /**
  *
  * @author diego
  */
 public class Login extends Application {
+    Connection conn= null;
+    OraclePreparedStatement pst = null;
+    OracleResultSet rs= null;
     
  @Override
     public void start(Stage primaryStage) {
@@ -53,32 +60,7 @@ public class Login extends Application {
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
         
-        btn.setOnAction(new EventHandler<ActionEvent>() {
- 
-        @Override
-        public void handle(ActionEvent e) {
-            actiontarget.setFill(Color.FIREBRICK);
-            actiontarget.setText("Sign in button pressed");
-            
-            
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Interf.fxml"));
-            try {
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-            }
-            catch( IOException exception) {
-            throw new RuntimeException( exception);
-            }
-            
-            
-            
-            //primaryStage.close();
-            
-            
-        }
-});
+        
         
         Scene scene= new Scene(grid, 400, 300);
         primaryStage.setScene(scene);
@@ -107,7 +89,49 @@ public class Login extends Application {
         
         //grid.setGridLinesVisible(true);
         
-       
+       btn.setOnAction(new EventHandler<ActionEvent>() {
+ 
+        @Override
+        public void handle(ActionEvent e) {
+            
+            
+            actiontarget.setFill(Color.FIREBRICK);
+            actiontarget.setText("Sign in button pressed");
+            
+            conn= Conectar.Cone();
+            
+           
+            try{
+                String sql ="select * from login where user_id=? and password=?";
+                pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+                pst.setString(1, userTextField.getText());
+                pst.setString(2, pwBox.getText());
+                rs = (OracleResultSet) pst.executeQuery(); 
+                if(rs.next())
+                {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("Interf.fxml"));
+                    
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    primaryStage.setScene(scene);
+                    primaryStage.show();
+                }
+                
+                
+            }catch(Exception E)
+            {
+                JOptionPane.showMessageDialog(null, E);
+            }
+            
+            
+            
+            
+            
+            //primaryStage.close();
+            
+            
+        }
+});
         
         
     }
