@@ -16,8 +16,9 @@ import javax.swing.JOptionPane;
 public class Conectar {
     public static Connection Cone(){
         try{
-            Class.forName("oracle.jdbc.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhoost:1521:orcl","system","12345"); 
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection con = DriverManager.getConnection(
+                            "jdbc:oracle:thin:@localhost:1521:orcl", "system", "12345"); 
             return con;
         }catch(Exception E)
         {

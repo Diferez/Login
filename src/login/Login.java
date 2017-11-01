@@ -102,19 +102,27 @@ public class Login extends Application {
             
            
             try{
-                String sql ="select * from login where user_id=? and password=?";
+                String sql ="select * from cerv_usuarios where usu_nombre=? and usu_pw=?";
                 pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+                System.out.println("1 "+pst.toString());
                 pst.setString(1, userTextField.getText());
+                System.out.println("2 "+pst.toString()+" "+userTextField.getText());
                 pst.setString(2, pwBox.getText());
+                System.out.println("3 "+pst.toString()+" "+pwBox.getText());
                 rs = (OracleResultSet) pst.executeQuery(); 
+                System.out.print(rs);
+                
                 if(rs.next())
                 {
+                    System.out.println("entroooo");
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("Interf.fxml"));
                     
                     Parent root = loader.load();
                     Scene scene = new Scene(root);
                     primaryStage.setScene(scene);
                     primaryStage.show();
+                }else{
+                JOptionPane.showMessageDialog(null, "Invalid User");
                 }
                 
                 
