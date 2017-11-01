@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -9,11 +10,34 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.InterfController">
    <children>
       <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
+            <Tab text="Fabricante">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="200.0" layoutY="140.0" AnchorPane.bottomAnchor="138.40000000000003" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nombre de la fabrica" />
+                              <TextField fx:id="TxNomFabF" GridPane.columnIndex="1" />
+                              <Button fx:id="Btn_CrearF" mnemonicParsing="false" onAction="#CrearF" prefHeight="26.0" prefWidth="75.0" text="Crear" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
             <Tab text="Cerveza">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -30,6 +54,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <Label text="Nombre de la cerveza" />
@@ -38,12 +63,13 @@
                               <Label text="Nombre del fabricante" GridPane.rowIndex="3" />
                               <Label text="Coste de Fabricacion" GridPane.rowIndex="4" />
                               <Label text="Descripcion" GridPane.rowIndex="5" />
-                              <TextField GridPane.columnIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="TxNomC" GridPane.columnIndex="1" />
+                              <TextField fx:id="TxTipoC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="TxAlcoC" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="TxNomFabC" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="TxCosteC" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="TxDescripC" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Button fx:id="Btn_CrearC" mnemonicParsing="false" onAction="#CrearC" prefHeight="26.0" prefWidth="103.0" text="Crear" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                      </children>

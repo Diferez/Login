@@ -41,7 +41,7 @@ public class Login extends Application {
     
  @Override
     public void start(Stage primaryStage) {
-        
+        conn= Conectar.Cone();
         primaryStage.setTitle("Cerveza inc");
         
         
@@ -98,23 +98,23 @@ public class Login extends Application {
             actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Sign in button pressed");
             
-            conn= Conectar.Cone();
+            
             
            
             try{
                 String sql ="select * from cerv_usuarios where usu_nombre=? and usu_pw=?";
                 pst = (OraclePreparedStatement) conn.prepareStatement(sql);
-                System.out.println("1 "+pst.toString());
+                
                 pst.setString(1, userTextField.getText());
-                System.out.println("2 "+pst.toString()+" "+userTextField.getText());
+                
                 pst.setString(2, pwBox.getText());
-                System.out.println("3 "+pst.toString()+" "+pwBox.getText());
+                
                 rs = (OracleResultSet) pst.executeQuery(); 
-                System.out.print(rs);
+                
                 
                 if(rs.next())
                 {
-                    System.out.println("entroooo");
+                    
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("Interf.fxml"));
                     
                     Parent root = loader.load();
