@@ -73,7 +73,27 @@ public class InterfController implements Initializable {
     @FXML
     void CrearC(ActionEvent event) {
         
-        String sql="";
+        String sql="INSERT INTO CERV_CERVEZA(CER_GRADO,CER_PRECIO,CER_DESCRIP,FAB_NOMBRE,CER_TIPO,CER_CODIGO,CER_NOMBRE)VALUES(?,?,?,?,?,?,?)";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        
+        pst.setString(1, TxAlcoC.getText());
+        pst.setString(2, TxCosteC.getText());
+        pst.setString(3, TxDescripC.getText());
+        pst.setString(4, ChoiceBoxFabC.getValue().toString());
+        pst.setString(5, TxTipoC.getText());
+        
+        String temp=ChoiceBoxFabC.getValue().toString().substring(0,2)+TxTipoC.getText().substring(0,2)+TxNomC.getText().substring(0,2);
+        pst.setString(6, temp);
+        
+        pst.setString(7, TxNomC.getText());
+        
+        rs = (OracleResultSet) pst.executeQuery();
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+        
+        
     }
     
     @FXML
@@ -103,7 +123,6 @@ public class InterfController implements Initializable {
     public void Poblarg()
     {
         ObservableList<String> FabCtemp = FXCollections.observableArrayList();
-        System.out.println("Poblando");
         String sql="select * from cerv_fabricante";
         try{
         pst = (OraclePreparedStatement) conn.prepareStatement(sql);
