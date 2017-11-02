@@ -8,10 +8,13 @@ package login;
 import java.net.URL;
 import java.sql.Connection;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
 import oracle.jdbc.OraclePreparedStatement;
@@ -24,6 +27,7 @@ import oracle.jdbc.OracleResultSet;
  */
 public class InterfController implements Initializable {
     
+    ObservableList<String> FabC = FXCollections.observableArrayList();
     Connection conn= Conectar.Cone();;
     OraclePreparedStatement pst = null;
     OracleResultSet rs= null;
@@ -52,7 +56,7 @@ public class InterfController implements Initializable {
     private TextField TxAlcoC;
 
     @FXML
-    private TextField TxNomFabC;
+    private ChoiceBox ChoiceBoxFabC;
 
     @FXML
     private TextField TxCosteC;
@@ -93,6 +97,27 @@ public class InterfController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        Poblarg();
+        
+    }
+    
+    public void Poblarg()
+    {
+        System.out.println("Poblando");
+        String sql="select * from cerv_fabricante";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        rs = (OracleResultSet) pst.executeQuery();
+        while (rs.next())
+        {
+        String Fabnombre=rs.getString("FAB_NOMBRE");
+        FabC.add(Fabnombre);
+        }
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+        ChoiceBoxFabC.setItems(FabC);
+        
     }
     
 }
