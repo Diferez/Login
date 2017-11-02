@@ -87,9 +87,8 @@ public class InterfController implements Initializable {
         }catch(Exception E){
         JOptionPane.showMessageDialog(null, E);
         }
-        
-        
-        
+        TxNomFabF.clear();
+        Poblarg();
     }
     /**
      * Initializes the controller class.
@@ -103,6 +102,7 @@ public class InterfController implements Initializable {
     
     public void Poblarg()
     {
+        ObservableList<String> FabCtemp = FXCollections.observableArrayList();
         System.out.println("Poblando");
         String sql="select * from cerv_fabricante";
         try{
@@ -111,11 +111,12 @@ public class InterfController implements Initializable {
         while (rs.next())
         {
         String Fabnombre=rs.getString("FAB_NOMBRE");
-        FabC.add(Fabnombre);
+        FabCtemp.add(Fabnombre);
         }
         }catch(Exception E){
         JOptionPane.showMessageDialog(null, E);
         }
+        FabC=FabCtemp;
         ChoiceBoxFabC.setItems(FabC);
         
     }
