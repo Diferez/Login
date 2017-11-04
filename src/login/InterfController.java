@@ -67,7 +67,32 @@ public class InterfController implements Initializable {
     @FXML
     private Button Btn_CrearC;
     
+    /*
+    //////////////////////////////////////
+    /////////Pestaña Cliente//////////////
+    //////////////////////////////////////
+    */
     
+    @FXML
+    private TextField TxNomCl;
+
+    @FXML
+    private TextField TxApeCl;
+
+    @FXML
+    private TextField TxIdCl;
+
+    @FXML
+    private TextField TxPaisCl;
+
+    @FXML
+    private TextField TxDirCl;
+
+    @FXML
+    private TextField TxCorreoCl;
+
+    @FXML
+    private Button Btn_CrearCl;
     
     
     @FXML
@@ -96,6 +121,27 @@ public class InterfController implements Initializable {
         
     }
     
+    
+    
+    @FXML
+    void CrearCl(ActionEvent event) {
+        String sql="INSERT INTO CERV_CLIENTE(CLI_NOMBRE,CLI_APELLIDO,CLI_ID,CLI_PAIS,CLI_DIR,CLI_EMAIL) VALUES(?,?,?,?,?,?)";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        
+        pst.setString(1, TxNomCl.getText());
+        pst.setString(2, TxApeCl.getText());
+        pst.setString(3, TxIdCl.getText());
+        pst.setString(4, TxPaisCl.getText());
+        pst.setString(5, TxDirCl.getText());
+        pst.setString(6, TxCorreoCl.getText());    
+        rs = (OracleResultSet) pst.executeQuery();
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+
+    }
+    
     @FXML
     void CrearF(ActionEvent event) {
         
@@ -109,6 +155,7 @@ public class InterfController implements Initializable {
         }
         TxNomFabF.clear();
         Poblarg();
+        
     }
     /**
      * Initializes the controller class.
