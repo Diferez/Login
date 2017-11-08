@@ -5,8 +5,11 @@
  */
 package login;
 
+import com.sun.javaws.Main;
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.geometry.Insets;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -128,6 +131,7 @@ public class Login extends Application {
                 
             }catch(Exception E)
             {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, E);
                 JOptionPane.showMessageDialog(null, E);
             }
             
