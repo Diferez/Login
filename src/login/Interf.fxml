@@ -46,11 +46,6 @@
                                     </AnchorPane>
                                 </content>
                               </Tab>
-                              <Tab>
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                </content>
-                              </Tab>
                               <Tab text="Cerveza">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -82,7 +77,7 @@
                                                 <TextField fx:id="TxCosteC" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                 <TextField fx:id="TxDescripC" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                                                 <Button fx:id="Btn_CrearC" mnemonicParsing="false" onAction="#CrearC" prefHeight="26.0" prefWidth="103.0" text="Crear" GridPane.rowIndex="6" />
-                                                <ChoiceBox fx:id="ChoiceBoxFabC" prefHeight="26.0" prefWidth="291.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <ChoiceBox fx:id="ChoiceBoxFabC" prefHeight="26.0" prefWidth="370.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                              </children>
                                           </GridPane>
                                        </children>
@@ -179,7 +174,7 @@
                                              <children>
                                                 <Label text="Pais" />
                                                 <Label text="Nombre" GridPane.rowIndex="1" />
-                                                <Label text="Id_tienda" GridPane.rowIndex="2" />
+                                                <Label text="Identificacion de La Tienda " GridPane.rowIndex="2" />
                                                 <Label text="Ciudad" GridPane.rowIndex="3" />
                                                 <Label text="Contacto" GridPane.rowIndex="4" />
                                                 <TextField fx:id="TxPaiT" GridPane.columnIndex="1" />
@@ -187,7 +182,7 @@
                                                 <TextField fx:id="TxIdT" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <TextField fx:id="TxCiuT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                 <TextField fx:id="TxConT" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                <Button fx:id="Btn_CrearT" mnemonicParsing="false" onAction="#CrearT" text="create" GridPane.rowIndex="5" />
+                                                <Button fx:id="Btn_CrearT" mnemonicParsing="false" onAction="#CrearT" prefHeight="25.0" prefWidth="88.0" text="Crear" GridPane.rowIndex="5" />
                                              </children>
                                           </GridPane>
                                        </children>
