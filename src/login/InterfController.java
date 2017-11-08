@@ -94,6 +94,23 @@ public class InterfController implements Initializable {
     @FXML
     private Button Btn_CrearCl;
     
+    /*Pestaña Depositos*/
+    
+    @FXML
+    private TextField TxCodD;
+
+    @FXML
+    private TextField TxDirD;
+
+    @FXML
+    private TextField TxCapD;
+
+    @FXML
+    private Button Btn_CrearD;
+
+    @FXML
+    private ChoiceBox<?> ChoiseBoxFabD;
+    
     
     @FXML
     void CrearC(ActionEvent event) {
@@ -157,6 +174,12 @@ public class InterfController implements Initializable {
         Poblarg();
         
     }
+    
+    @FXML
+    void CrearD(ActionEvent event) {
+
+    }
+
     /**
      * Initializes the controller class.
      */
