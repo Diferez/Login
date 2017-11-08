@@ -109,7 +109,7 @@ public class InterfController implements Initializable {
     private Button Btn_CrearD;
 
     @FXML
-    private ChoiceBox<?> ChoiseBoxFabD;
+    private ChoiceBox ChoiceBoxFabD;
     
     
     @FXML
@@ -207,6 +207,7 @@ public class InterfController implements Initializable {
         }
         FabC=FabCtemp;
         ChoiceBoxFabC.setItems(FabC);
+        ChoiceBoxFabD.setItems(FabC);
         
     }
     
