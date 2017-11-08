@@ -112,6 +112,90 @@ public class InterfController implements Initializable {
     private ChoiceBox ChoiceBoxFabD;
     
     
+     /*
+    /////////////////////
+    Pestaña Tienda    ///
+    /////////////////////
+    */
+    @FXML
+    private TextField TxPaiT;
+    @FXML
+    private TextField TxNomT;
+    @FXML
+    private TextField TxIdT;
+    @FXML
+    private TextField TxCiuT;
+    @FXML
+    private TextField TxConT;
+    @FXML
+    private Button Btn_CrearT;
+    @FXML
+    void CrearT(ActionEvent event) { }
+    
+    /*///////////////////
+    Pestaña Pedido//  ///
+    /////////////////////
+    */
+    @FXML
+    private TextField TxCodP;
+    @FXML
+    private ChoiceBox ChoiceBoxIdTienP;
+    @FXML
+    private ChoiceBox ChoiceBoxNomDP;
+    @FXML
+    private TextField TxFechaP;
+    @FXML
+    private Button Btn_CrearP;
+    @FXML
+    void CrearP(ActionEvent event) { }
+    
+    
+    /*///////////////////
+    Pestaña Orden   /////
+    /////////////////////
+    */
+    @FXML
+    private ChoiceBox ChoiceBoxNomFabO;
+    @FXML
+    private TextField TxCodO;
+    @FXML
+    private ChoiceBox ChoiceBoxProO;
+    @FXML
+    private Button Btn_CrearO;
+    @FXML
+    void CrearO(ActionEvent event) { }
+    
+    
+    /*///////////////////
+    Pestaña Proveedor  /////
+    /////////////////////
+    */
+    @FXML
+    private TextField TxProCodPro;
+    @FXML
+    private TextField TxDirPro;
+    @FXML
+    private Button Btn_CrearPro;
+    @FXML
+    void CrearPro(ActionEvent event) { }
+    
+    /*///////////////////
+    Pestaña Materias Primas  /////
+    /////////////////////
+    */
+    @FXML
+    private TextField TxPreM;
+    @FXML
+    private TextField TxNomM;
+    @FXML
+    private TextField TxCodM;
+    @FXML
+    private Button Btn_CrearM;
+    @FXML
+    void CrearM(ActionEvent event) { }
+    
+    
+
     @FXML
     void CrearC(ActionEvent event) {
         
