@@ -131,6 +131,10 @@ public class InterfController implements Initializable {
         pst.setString(7, TxNomC.getText());
         
         rs = (OracleResultSet) pst.executeQuery();
+        
+        
+         
+         
         }catch(Exception E){
         JOptionPane.showMessageDialog(null, E);
         }
@@ -146,6 +150,7 @@ public class InterfController implements Initializable {
         try{
         pst = (OraclePreparedStatement) conn.prepareStatement(sql);
         
+        //Enviar la informacion a la base de datos
         pst.setString(1, TxNomCl.getText());
         pst.setString(2, TxApeCl.getText());
         pst.setString(3, TxIdCl.getText());
@@ -153,8 +158,21 @@ public class InterfController implements Initializable {
         pst.setString(5, TxDirCl.getText());
         pst.setString(6, TxCorreoCl.getText());    
         rs = (OracleResultSet) pst.executeQuery();
+        
+        JOptionPane.showMessageDialog(null, "¡Enhorabuena! El usuario ha sido creado exitosamente");
+        
+        //Limpiar textbox una vez creado un usuario
+        TxNomCl.clear();
+        TxApeCl.clear();
+        TxIdCl.clear();
+        TxPaisCl.clear();
+        TxDirCl.clear();
+        TxCorreoCl.clear();
+        
+        
         }catch(Exception E){
         JOptionPane.showMessageDialog(null, E);
+        
         }
 
     }
