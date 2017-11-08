@@ -119,6 +119,7 @@ public class InterfController implements Initializable {
         try{
         pst = (OraclePreparedStatement) conn.prepareStatement(sql);
         
+        //Enviar la informacion de Cerveza a la base de datos
         pst.setString(1, TxAlcoC.getText());
         pst.setString(2, TxCosteC.getText());
         pst.setString(3, TxDescripC.getText());
@@ -132,14 +133,17 @@ public class InterfController implements Initializable {
         
         rs = (OracleResultSet) pst.executeQuery();
         
+        JOptionPane.showMessageDialog(null, "¡Enhorabuena! Una nueva cerveza para disfrutar.");
         
-         
+        //Limpiar textboxes
+        TxAlcoC.clear();
+        TxCosteC.clear();
+        TxDescripC.clear();
+        TxTipoC.clear();
          
         }catch(Exception E){
         JOptionPane.showMessageDialog(null, E);
         }
-        
-        
     }
     
     
