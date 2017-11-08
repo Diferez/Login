@@ -199,7 +199,34 @@ public class InterfController implements Initializable {
     
     @FXML
     void CrearD(ActionEvent event) {
+        String sql="INSERT INTO CERV_CLIENTE(CLI_NOMBRE,CLI_APELLIDO,CLI_ID,CLI_PAIS,CLI_DIR,CLI_EMAIL) VALUES(?,?,?,?,?,?)";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
         
+        //Enviar la informacion a la base de datos
+        pst.setString(1, TxNomCl.getText());
+        pst.setString(2, TxApeCl.getText());
+        pst.setString(3, TxIdCl.getText());
+        pst.setString(4, TxPaisCl.getText());
+        pst.setString(5, TxDirCl.getText());
+        pst.setString(6, TxCorreoCl.getText());    
+        rs = (OracleResultSet) pst.executeQuery();
+        
+        JOptionPane.showMessageDialog(null, "¡Enhorabuena! El usuario ha sido creado exitosamente");
+        
+        //Limpiar textbox una vez creado un usuario
+        TxNomCl.clear();
+        TxApeCl.clear();
+        TxIdCl.clear();
+        TxPaisCl.clear();
+        TxDirCl.clear();
+        TxCorreoCl.clear();
+        
+        
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        
+        }
         
     }
 

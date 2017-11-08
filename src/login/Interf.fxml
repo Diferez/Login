@@ -182,12 +182,12 @@
                                                 <Label text="Id_tienda" GridPane.rowIndex="2" />
                                                 <Label text="Ciudad" GridPane.rowIndex="3" />
                                                 <Label text="Contacto" GridPane.rowIndex="4" />
-                                                <TextField GridPane.columnIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                <Button mnemonicParsing="false" text="create" GridPane.rowIndex="5" />
+                                                <TextField fx:id="TxPaiT" GridPane.columnIndex="1" />
+                                                <TextField fx:id="TxNomT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="TxIdT" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="TxCiuT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="TxConT" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Button fx:id="Btn_CrearT" mnemonicParsing="false" onAction="#CrearT" text="create" GridPane.rowIndex="5" />
                                              </children>
                                           </GridPane>
                                        </children>
@@ -212,22 +212,22 @@
                                             </rowConstraints>
                                              <children>
                                                 <Label />
-                                                <Label text="identificacion de tienda" GridPane.rowIndex="1" />
-                                                <Label text="codigo del pedido" />
-                                                <Label text="nombre del deposito" GridPane.rowIndex="2" />
-                                                <Label text="fecha" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <Button mnemonicParsing="false" text="create" GridPane.rowIndex="4" />
+                                                <Label text="Identificacion de Tienda" GridPane.rowIndex="1" />
+                                                <Label text="Codigo del Pedido" />
+                                                <Label text="Nombre del Deposito" GridPane.rowIndex="2" />
+                                                <Label text="Fecha" GridPane.rowIndex="3" />
+                                                <TextField fx:id="TxCodP" GridPane.columnIndex="1" />
+                                                <TextField fx:id="TxFechaP" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Button fx:id="Btn_CrearP" mnemonicParsing="false" onAction="#CrearP" prefHeight="25.0" prefWidth="95.0" text="Create" GridPane.rowIndex="4" />
+                                                <ChoiceBox fx:id="ChoiceBoxIdTienP" prefHeight="25.0" prefWidth="370.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ChoiceBox fx:id="ChoiceBoxNomDP" prefHeight="25.0" prefWidth="367.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                              </children>
                                           </GridPane>
                                        </children>
                                     </AnchorPane>
                                 </content>
                               </Tab>
-                              <Tab text="orden">
+                              <Tab text="Orden">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -246,7 +246,7 @@
                                                 <Label />
                                                 <Label text="codigo orden" GridPane.rowIndex="1" />
                                                 <Label text="proveedor" GridPane.rowIndex="2" />
-                                                <Label text="nombre fabrica" />
+                                                <Label text="Nombre Fabrica" />
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
                                                 <Button mnemonicParsing="false" text="create" GridPane.rowIndex="3" />
                                                 <TextField GridPane.columnIndex="1" />
