@@ -147,7 +147,7 @@
                                                 <TextField fx:id="TxDirD" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <TextField fx:id="TxCapD" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                                 <Button fx:id="Btn_CrearD" mnemonicParsing="false" onAction="#CrearD" prefHeight="25.0" prefWidth="109.0" text="Crear" GridPane.rowIndex="4" />
-                                                <ChoiceBox fx:id="ChoiceBoxFabD" prefHeight="25.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <ChoiceBox fx:id="ChoiceBoxFabD" prefHeight="25.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                              </children>
                                           </GridPane>
                                        </children>
