@@ -15,103 +15,176 @@
    <children>
       <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-            <Tab text="Fabricante">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane layoutX="200.0" layoutY="140.0" AnchorPane.bottomAnchor="138.40000000000003" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Label text="Nombre de la fabrica" />
-                              <TextField fx:id="TxNomFabF" GridPane.columnIndex="1" />
-                              <Button fx:id="Btn_CrearF" mnemonicParsing="false" onAction="#CrearF" prefHeight="26.0" prefWidth="75.0" text="Crear" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-            <Tab text="Cerveza">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <GridPane hgap="10.0" layoutX="200.0" layoutY="100.0" prefWidth="200.0" vgap="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Label text="Nombre de la cerveza" />
-                              <Label text="Tipo" GridPane.rowIndex="1" />
-                              <Label text="Porsentaje de alcohool" GridPane.rowIndex="2" />
-                              <Label text="Nombre del fabricante" GridPane.rowIndex="3" />
-                              <Label text="Coste de Fabricacion" GridPane.rowIndex="4" />
-                              <Label text="Descripcion" GridPane.rowIndex="5" />
-                              <TextField fx:id="TxNomC" GridPane.columnIndex="1" />
-                              <TextField fx:id="TxTipoC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="TxAlcoC" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="TxCosteC" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField fx:id="TxDescripC" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Button fx:id="Btn_CrearC" mnemonicParsing="false" onAction="#CrearC" prefHeight="26.0" prefWidth="103.0" text="Crear" GridPane.rowIndex="6" />
-                              <ChoiceBox fx:id="ChoiceBoxFabC" prefHeight="26.0" prefWidth="291.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                           </children>
-                        </GridPane>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-          <Tab text="Cliente">
+          <Tab text="Crear">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <GridPane hgap="10.0" layoutX="150.0" layoutY="139.0" vgap="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Label text="Nombres" />
-                              <Label text="Apellidos" GridPane.rowIndex="1" />
-                              <Label text="Numero de identificacion" GridPane.rowIndex="2" />
-                              <Label text="Pais" GridPane.rowIndex="3" />
-                              <Label text="Direccion" GridPane.rowIndex="4" />
-                              <Label text="Correo" GridPane.rowIndex="5" />
-                              <TextField fx:id="TxNomCl" GridPane.columnIndex="1" />
-                              <TextField fx:id="TxApeCl" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="TxIdCl" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="TxPaisCl" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField fx:id="TxDirCl" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField fx:id="TxCorreoCl" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Button fx:id="Btn_CrearCl" mnemonicParsing="false" onAction="#CrearCl" prefHeight="26.0" prefWidth="100.0" text="Crear" GridPane.rowIndex="6" />
-                           </children>
-                        </GridPane>
-                     </children></AnchorPane>
+                        <TabPane prefHeight="373.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                              <Tab text="Fabricante">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="294.0" prefWidth="600.0">
+                                       <children>
+                                          <GridPane layoutX="200.0" layoutY="140.0" AnchorPane.bottomAnchor="138.40000000000003" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="140.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Nombre de la fabrica" />
+                                                <TextField fx:id="TxNomFabF" GridPane.columnIndex="1" />
+                                                <Button fx:id="Btn_CrearF" mnemonicParsing="false" onAction="#CrearF" prefHeight="26.0" prefWidth="75.0" text="Crear" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Cerveza">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane hgap="10.0" layoutX="200.0" layoutY="100.0" prefWidth="200.0" vgap="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Nombre de la cerveza" />
+                                                <Label text="Tipo" GridPane.rowIndex="1" />
+                                                <Label text="Porsentaje de alcohool" GridPane.rowIndex="2" />
+                                                <Label text="Nombre del fabricante" GridPane.rowIndex="3" />
+                                                <Label text="Coste de Fabricacion" GridPane.rowIndex="4" />
+                                                <Label text="Descripcion" GridPane.rowIndex="5" />
+                                                <TextField fx:id="TxNomC" GridPane.columnIndex="1" />
+                                                <TextField fx:id="TxTipoC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="TxAlcoC" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="TxCosteC" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField fx:id="TxDescripC" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Button fx:id="Btn_CrearC" mnemonicParsing="false" onAction="#CrearC" prefHeight="26.0" prefWidth="103.0" text="Crear" GridPane.rowIndex="6" />
+                                                <ChoiceBox fx:id="ChoiceBoxFabC" prefHeight="26.0" prefWidth="291.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                            <Tab text="Cliente">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane hgap="10.0" layoutX="150.0" layoutY="139.0" vgap="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Nombres" />
+                                                <Label text="Apellidos" GridPane.rowIndex="1" />
+                                                <Label text="Numero de identificacion" GridPane.rowIndex="2" />
+                                                <Label text="Pais" GridPane.rowIndex="3" />
+                                                <Label text="Direccion" GridPane.rowIndex="4" />
+                                                <Label text="Correo" GridPane.rowIndex="5" />
+                                                <TextField fx:id="TxNomCl" GridPane.columnIndex="1" />
+                                                <TextField fx:id="TxApeCl" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="TxIdCl" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="TxPaisCl" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="TxDirCl" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField fx:id="TxCorreoCl" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Button fx:id="Btn_CrearCl" mnemonicParsing="false" onAction="#CrearCl" prefHeight="26.0" prefWidth="100.0" text="Crear" GridPane.rowIndex="6" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Deposito">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane hgap="10.0" layoutX="200.0" layoutY="127.0" vgap="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Codigo del deposito" />
+                                                <Label text="Fabrica relacionada" GridPane.rowIndex="1" />
+                                                <Label text="Direccion" GridPane.rowIndex="2" />
+                                                <Label text="Capacidad" GridPane.rowIndex="3" />
+                                                <TextField fx:id="TxCodD" GridPane.columnIndex="1" />
+                                                <TextField fx:id="TxDirD" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="TxCapD" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Button fx:id="Btn_CrearD" mnemonicParsing="false" onAction="#CrearD" prefHeight="25.0" prefWidth="109.0" text="Crear" GridPane.rowIndex="4" />
+                                                <ChoiceBox fx:id="ChoiseBoxFabD" prefHeight="25.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Tienda">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane hgap="10.0" layoutX="200.0" layoutY="127.0" vgap="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Label" />
+                                                <Label text="Label" GridPane.rowIndex="1" />
+                                                <Label text="Label" GridPane.rowIndex="2" />
+                                                <Label text="Label" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
             </content>
           </Tab>
           <Tab text="Untitled Tab 2">
