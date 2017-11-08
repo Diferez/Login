@@ -95,29 +95,6 @@ public class InterfController implements Initializable {
     private Button Btn_CrearCl;
     
     
-    /*
-    //////////////////////////////////////
-    /////////Pestaña Deposito//////////////
-    //////////////////////////////////////
-    */
-    @FXML
-    private TextField TxDirD;
-
-    @FXML
-    private TextField TxNomFabD;
-
-    @FXML
-    private TextField TxCapD;
-
-    @FXML
-    private TextField TxIdD;
-
-    @FXML
-    private Button Btn_CrearD;
-    
-    /*
-    Boton pestaña Cerveza
-    */
     @FXML
     void CrearC(ActionEvent event) {
         
@@ -144,9 +121,7 @@ public class InterfController implements Initializable {
         
     }
     
-    /*
-    Boton pestaña Cliente
-    */
+    
     
     @FXML
     void CrearCl(ActionEvent event) {
@@ -167,10 +142,6 @@ public class InterfController implements Initializable {
 
     }
     
-    
-    /*
-    Boton pestaña Fabrica
-    */
     @FXML
     void CrearF(ActionEvent event) {
         
@@ -186,33 +157,6 @@ public class InterfController implements Initializable {
         Poblarg();
         
     }
-    
-    /*
-    Boton pestaña Deposito
-    */
-    
-    @FXML
-    void CrearD(ActionEvent event) {
-        String sql="insert into CERV_DEPOSITO(FAB_NOMBRE,DEP_CAPACIDAD,DEP_UBICACION,DEP_CODIGO) values (?,?,?,?);";
-        try{
-        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
-        
-        pst.setString(1, TxNomFabD.getText());
-        
-        
-        pst.setString(2, TxCapD.getText());
-        pst.setString(3, TxDirD.getText());
-        pst.setString(4, TxIdD.getText());
-   
-        rs = (OracleResultSet) pst.executeQuery();
-        }catch(Exception E){
-        JOptionPane.showMessageDialog(null, E);
-        }
-        
-    }
-    
-    
-    
     /**
      * Initializes the controller class.
      */
