@@ -227,7 +227,7 @@
                                     </AnchorPane>
                                 </content>
                               </Tab>
-                              <Tab text="orden">
+                              <Tab text="Orden">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -246,7 +246,7 @@
                                                 <Label />
                                                 <Label text="codigo orden" GridPane.rowIndex="1" />
                                                 <Label text="proveedor" GridPane.rowIndex="2" />
-                                                <Label text="nombre fabrica" />
+                                                <Label text="Nombre Fabrica" />
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
                                                 <Button mnemonicParsing="false" text="create" GridPane.rowIndex="3" />
                                                 <TextField GridPane.columnIndex="1" />
