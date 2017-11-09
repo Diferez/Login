@@ -187,27 +187,36 @@ public class InterfController implements Initializable {
     Pestaña Ver Cerveza  /////
     /////////////////////
     */
-    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
+    
+    
     
     @FXML
     private TableView<Cerveza> TabCer;
+
     @FXML
     private TableColumn<Cerveza, String> CNombre;
+
     @FXML
     private TableColumn<Cerveza, String> CCodigo;
+
     @FXML
     private TableColumn<Cerveza, String> CTipo;
+
     @FXML
     private TableColumn<Cerveza, String> CFabricante;
+
     @FXML
     private TableColumn<Cerveza, Integer> CCoste;
+
     @FXML
     private TableColumn<Cerveza, Integer> CAlcohol;
+
     @FXML
     private TableColumn<Cerveza, String> CDescripcion;
     
     
     
+<<<<<<< HEAD
     /*///////////////////
     Pestaña Ver Cliente /
     /////////////////////
@@ -271,8 +280,12 @@ public class InterfController implements Initializable {
     
     @FXML
     private TableView<Orden> Orden;
+=======
+    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
+>>>>>>> parent of 2915885... m+as tablas
     
     
+
     //--------------CREAR CERVEZA---------------//
     @FXML
     void CrearC(ActionEvent event) {
@@ -616,7 +629,6 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     
     public void Tablas()
     {
-    /*-----------------------CERVEZAS--------------------------*/
     CNombre.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CNombre"));
     CCodigo.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CCodigo"));
     CTipo.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CTipo"));
@@ -624,6 +636,7 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CCoste.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CCoste"));
     CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
     CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
+<<<<<<< HEAD
 
     /*-----------------------CLIENTES--------------------------*/
     CliNombres.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliNombres"));
@@ -648,23 +661,20 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     
   
    
+=======
+>>>>>>> parent of 2915885... m+as tablas
+    
+    
+    
+    
     
     CrearCervezas();
     TabCer.setItems(CerT);
     
-    CrearCliente();
-    TabCli.setItems(CliT);
-    
-    CrearTienda();
-    TabTie.setItems(TieT);
-    
-    CrearPedido();
-    TabPed.setItems(PedT);
     
     }
     
     
-    //////////////////////////METODOS PARA LEER DATOS EN LA PESTAÑA VER //////////////////////
     public void CrearCervezas()
     {
     ObservableList<Cerveza> Cervtemp = FXCollections.observableArrayList();
@@ -689,79 +699,6 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
         JOptionPane.showMessageDialog(null, E);
         }
         CerT=Cervtemp;
-    }
-    
-    public void CrearCliente()
-    {
-    ObservableList<Cliente> Clitemp = FXCollections.observableArrayList();
-        String sql="select * from cerv_cliente";
-        try{
-        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
-        rs = (OracleResultSet) pst.executeQuery();
-        while (rs.next())
-        {
-        String Nombres =rs.getString("CLI_NOMBRE");
-        String Apellidos =rs.getString("CLI_APELLIDO");
-        String Identificacion =rs.getString("CLI_ID");
-        String Pais = rs.getString("CLI_PAIS");
-        String Email = rs.getString("CLI_EMAIL");
-        String Direccion =rs.getString("CLI_DIR");
-        
-        Cliente cliente = new Cliente(Nombres, Apellidos, Identificacion, Direccion, Pais, Email);
-        Clitemp.add(cliente);
-        }
-        }catch(Exception E){
-        JOptionPane.showMessageDialog(null, E);
-        }
-        CliT=Clitemp;
-    }
-    
-     public void CrearTienda()
-    {
-    ObservableList<Tienda> Tietemp = FXCollections.observableArrayList();
-        String sql="select * from cerv_tienda";
-        try{
-        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
-        rs = (OracleResultSet) pst.executeQuery();
-        while (rs.next())
-        {
-        String Pais =rs.getString("TIE_PAIS");
-        String Nombre =rs.getString("TIE_NOMBRE");
-        String Ciudad =rs.getString("TIE_CIUDAD");
-        String Contacto = rs.getString("TIE_CONTACTO");
-        String Id = rs.getString("TIE_ID");
-        
-        Tienda tienda = new Tienda(Pais, Nombre, Ciudad, Contacto, Id);
-        Tietemp.add(tienda);
-        }
-        }catch(Exception E){
-        JOptionPane.showMessageDialog(null, E);
-        }
-        TieT=Tietemp;
-    }
-     
-     public void CrearPedido()
-    {
-    ObservableList<Pedido> Pedtemp = FXCollections.observableArrayList();
-        String sql="select * from cerv_pedido";
-        try{
-        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
-        rs = (OracleResultSet) pst.executeQuery();
-        while (rs.next())
-        {
-        String Cod_pedido =rs.getString("PED_CODIGO");
-        String Fecha =rs.getString("PED_FECHA");
-        String Cod_dep =rs.getString("DEP_CODIGO");
-        String Id_tie = rs.getString("TIE_ID");
- 
-        
-        Pedido pedido = new Pedido(Cod_pedido, Fecha, Id_tie, Cod_dep);
-        Pedtemp.add(pedido);
-        }
-        }catch(Exception E){
-        JOptionPane.showMessageDialog(null, E);
-        }
-        PedT=Pedtemp;
     }
     
 }
