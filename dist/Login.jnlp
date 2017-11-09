@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Login.jar" size="23324" download="eager" />
+    <jar href="Login.jar" size="19989" download="eager" />
     <jar href="lib\ojdbc8.jar" size="4036257" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Login" >

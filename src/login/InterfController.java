@@ -216,77 +216,7 @@ public class InterfController implements Initializable {
     
     
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /*///////////////////
-    Pestaña Ver Cliente /
-    /////////////////////
-    */
-    public ObservableList<Cliente> CliT = FXCollections.observableArrayList();
-    @FXML
-    private TableView<Cliente> TabCli;
-    @FXML
-    private TableColumn<Cliente, String> CliNombres;
-    @FXML
-    private TableColumn<Cliente, String> CliApellidos;
-    @FXML
-    private TableColumn<Cliente, String> CliId;
-    @FXML
-    private TableColumn<Cliente, String> CliDir;
-    @FXML
-    private TableColumn<Cliente, String> CliPais;
-    @FXML
-    private TableColumn<Cliente, String> CliEmail;
-    
-    
-    /*///////////////////
-    Pestaña Ver Tienda //
-    /////////////////////
-    */
-    public ObservableList<Tienda> TieT = FXCollections.observableArrayList();
-     @FXML
-    private TableView<Tienda> TabTie;
-    @FXML
-    private TableColumn<Tienda, String> Tie_Pais;
-    @FXML
-    private TableColumn<Tienda, String> Tie_Nombre;
-    @FXML
-    private TableColumn<Tienda, String> Tie_Ciudad;
-    @FXML
-    private TableColumn<Tienda, String> Tie_Contacto;
-    @FXML
-    private TableColumn<Tienda, String> Tie_Id;
-    
-    /*///////////////////
-    Pestaña Ver Pedido //
-    /////////////////////
-    */
-     public ObservableList<Pedido> PedT = FXCollections.observableArrayList();
-     @FXML
-    private TableView<Pedido> TabPed;
-    @FXML
-    private TableColumn<Pedido, String> Ped_Codigo;
-    @FXML
-    private TableColumn<Pedido, String> Ped_Fecha;
-    @FXML
-    private TableColumn<Pedido, String> Tie_Id_p;
-    @FXML
-    private TableColumn<Pedido, String> Dep_Codigo;
-    
-    /*///////////////////
-    Pestaña Ver Orden //
-    /////////////////////
-    */
-    public ObservableList<Orden> OrtT = FXCollections.observableArrayList();
-    
-    @FXML
-    private TableView<Orden> Orden;
-=======
     public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
->>>>>>> parent of 2915885... m+as tablas
-=======
-    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
->>>>>>> parent of 2915885... m+as tablas
     
     
 
@@ -627,8 +557,6 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
             }
             ProP=Protemp;
             ChoiceBoxProO.setItems(ProP);
-            
-            
     }
     
     public void Tablas()
@@ -640,36 +568,6 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CCoste.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CCoste"));
     CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
     CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    /*-----------------------CLIENTES--------------------------*/
-    CliNombres.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliNombres"));
-    CliApellidos.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliApellidos"));
-    CliId.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliId"));
-    CliDir.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliDir"));
-    CliPais.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliPais"));
-    CliEmail.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliEmail"));
-    
-    /*-----------------------TIENDAS--------------------------*/
-    Tie_Pais.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Pais"));
-    Tie_Nombre.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Nombre"));
-    Tie_Ciudad.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Ciudad"));
-    Tie_Contacto.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Contacto"));
-    Tie_Id.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Id"));
-    
-    /*-----------------------PEDIDOS--------------------------*/
-    Ped_Codigo.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Ped_Codigo"));
-    Ped_Fecha.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Ped_Fecha"));
-    Tie_Id_p.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Tie_Id"));
-    Dep_Codigo.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Dep_Codigo"));
-    
-  
-   
-=======
->>>>>>> parent of 2915885... m+as tablas
-=======
->>>>>>> parent of 2915885... m+as tablas
     
     
     
