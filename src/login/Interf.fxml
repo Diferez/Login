@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -319,9 +321,39 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="Ver">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="373.0" prefWidth="788.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Cerveza">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="181.0" prefWidth="302.0">
+                                       <children>
+                                          <TableView fx:id="TabCer" layoutX="294.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                            <columns>
+                                                <TableColumn prefWidth="70.0" text="Nombre" />
+                                                <TableColumn text="Codigo" />
+                                                <TableColumn prefWidth="75.0" text="Tipo" />
+                                                <TableColumn prefWidth="75.0" text="Fabricante" />
+                                              <TableColumn prefWidth="75.0" text="Coste Fabricacion" />
+                                                <TableColumn prefWidth="75.0" text="\% Alcohol" />
+                                              <TableColumn prefWidth="273.0" text="Descripcion" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Untitled Tab 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
             </content>
           </Tab>
         </tabs>
