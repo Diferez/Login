@@ -339,7 +339,8 @@
                                                 <TableColumn fx:id="CFabricante" prefWidth="75.0" text="Fabricante" />
                                               <TableColumn fx:id="CCoste" prefWidth="75.0" text="Coste Fabricacion" />
                                                 <TableColumn fx:id="CAlcohol" prefWidth="75.0" text="\% Alcohol" />
-                                              <TableColumn fx:id="CDescripcion" prefWidth="273.0" text="Descripcion" />
+                                              <TableColumn fx:id="CDescripcion" minWidth="0.0" prefWidth="200.79998779296875" text="Descripcion" />
+                                                <TableColumn fx:id="CEliminar" prefWidth="75.20001220703125" text="Eliminar" />
                                             </columns>
                                           </TableView>
                                        </children>

@@ -5,9 +5,12 @@
  */
 package login;
 
+
 import java.net.URL;
 import java.sql.Connection;
 import java.util.ResourceBundle;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,10 +18,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 import javax.swing.JOptionPane;
 import oracle.jdbc.OraclePreparedStatement;
 import oracle.jdbc.OracleResultSet;
@@ -208,6 +213,9 @@ public class InterfController implements Initializable {
 
     @FXML
     private TableColumn<Cerveza, String> CDescripcion;
+    
+    @FXML
+    private TableColumn<Cerveza, Boolean> CEliminar;
     
     public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
     
@@ -561,6 +569,22 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CCoste.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CCoste"));
     CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
     CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
+    CEliminar.setSortable(false);
+    
+    CEliminar.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Cerveza, Boolean>, ObservableValue<Boolean>>() {
+      @Override public ObservableValue<Boolean> call(TableColumn.CellDataFeatures<Cerveza, Boolean> features) {
+        return new SimpleBooleanProperty(features.getValue() != null);
+      }
+    });
+    
+//    CEliminar.setCellFactory(new Callback<TableColumn<Cerveza, Boolean>, TableCell<Cerveza, Boolean>>() {
+//      @Override public TableCell<Cerveza, Boolean> call(TableColumn<Cerveza, Boolean> personBooleanTableColumn) {
+//        return new EliminarCell(stage, table);
+//        
+//      }
+//    });
+    
+    
     
     
     CrearCervezas();
@@ -568,6 +592,7 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     
     
     }
+    
     
     public void CrearCervezas()
     {
