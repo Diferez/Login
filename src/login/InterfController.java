@@ -187,39 +187,92 @@ public class InterfController implements Initializable {
     Pestaña Ver Cerveza  /////
     /////////////////////
     */
-    
-    
+    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
     
     @FXML
     private TableView<Cerveza> TabCer;
-
     @FXML
     private TableColumn<Cerveza, String> CNombre;
-
     @FXML
     private TableColumn<Cerveza, String> CCodigo;
-
     @FXML
     private TableColumn<Cerveza, String> CTipo;
-
     @FXML
     private TableColumn<Cerveza, String> CFabricante;
-
     @FXML
     private TableColumn<Cerveza, Integer> CCoste;
-
     @FXML
     private TableColumn<Cerveza, Integer> CAlcohol;
-
     @FXML
     private TableColumn<Cerveza, String> CDescripcion;
     
     
     
-    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
+    /*///////////////////
+    Pestaña Ver Cliente /
+    /////////////////////
+    */
+    public ObservableList<Cliente> CliT = FXCollections.observableArrayList();
+    @FXML
+    private TableView<Cliente> TabCli;
+    @FXML
+    private TableColumn<Cliente, String> CliNombres;
+    @FXML
+    private TableColumn<Cliente, String> CliApellidos;
+    @FXML
+    private TableColumn<Cliente, String> CliId;
+    @FXML
+    private TableColumn<Cliente, String> CliDir;
+    @FXML
+    private TableColumn<Cliente, String> CliPais;
+    @FXML
+    private TableColumn<Cliente, String> CliEmail;
     
     
-
+    /*///////////////////
+    Pestaña Ver Tienda //
+    /////////////////////
+    */
+    public ObservableList<Tienda> TieT = FXCollections.observableArrayList();
+     @FXML
+    private TableView<Tienda> TabTie;
+    @FXML
+    private TableColumn<Tienda, String> Tie_Pais;
+    @FXML
+    private TableColumn<Tienda, String> Tie_Nombre;
+    @FXML
+    private TableColumn<Tienda, String> Tie_Ciudad;
+    @FXML
+    private TableColumn<Tienda, String> Tie_Contacto;
+    @FXML
+    private TableColumn<Tienda, String> Tie_Id;
+    
+    /*///////////////////
+    Pestaña Ver Pedido //
+    /////////////////////
+    */
+     public ObservableList<Tienda> PedT = FXCollections.observableArrayList();
+     @FXML
+    private TableView<Tienda> TabPed;
+    @FXML
+    private TableColumn<Pedido, String> Ped_Codigo;
+    @FXML
+    private TableColumn<Pedido, String> Ped_Fecha;
+    @FXML
+    private TableColumn<Pedido, String> Tie_Id_p;
+    @FXML
+    private TableColumn<Pedido, String> Dep_Codigo;
+    
+    /*///////////////////
+    Pestaña Ver Orden //
+    /////////////////////
+    */
+    public ObservableList<Orden> OrtT = FXCollections.observableArrayList();
+    
+    @FXML
+    private TableView<Orden> Orden;
+    
+    
     //--------------CREAR CERVEZA---------------//
     @FXML
     void CrearC(ActionEvent event) {
@@ -561,6 +614,7 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     
     public void Tablas()
     {
+    /*-----------------------CERVEZAS--------------------------*/
     CNombre.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CNombre"));
     CCodigo.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CCodigo"));
     CTipo.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CTipo"));
@@ -568,18 +622,47 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CCoste.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CCoste"));
     CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
     CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
+
+    /*-----------------------CLIENTES--------------------------*/
+    CliNombres.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliNombres"));
+    CliApellidos.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliApellidos"));
+    CliId.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliId"));
+    CliDir.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliDir"));
+    CliPais.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliPais"));
+    CliEmail.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliEmail"));
     
+    /*-----------------------TIENDAS--------------------------*/
+    Tie_Pais.setCellValueFactory(new PropertyValueFactory<Tienda,SStringtritg>("Tie_Pais"));
+    Tie_Nombre.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Nombre"));
+    Tie_Ciudad.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Ciudad"));
+    Tie_Contacto.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Contacto"));
+    Tie_Id.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Id"));
     
+    /*-----------------------PEDIDOS--------------------------*/
+    Ped_Codigo.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Ped_Codigo"));
+    Ped_Fecha.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Ped_Fecha"));
+    Tie_Id_p.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Tie_Id"));
+    Dep_Codigo.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Dep_Codigo"));
     
-    
+  
+   
     
     CrearCervezas();
     TabCer.setItems(CerT);
     
+    CrearCliente();
+    TabCli.setItems(CliT);
+    
+    CrearTienda();
+    TabTie.setItems(TieT);
+    
+    CrearPedido();
+    TabPed.setItems(PedT);
     
     }
     
     
+    //////////////////////////METODOS PARA LEER DATOS EN LA PESTAÑA VER //////////////////////
     public void CrearCervezas()
     {
     ObservableList<Cerveza> Cervtemp = FXCollections.observableArrayList();
@@ -604,6 +687,79 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
         JOptionPane.showMessageDialog(null, E);
         }
         CerT=Cervtemp;
+    }
+    
+    public void CrearCliente()
+    {
+    ObservableList<Cliente> Clitemp = FXCollections.observableArrayList();
+        String sql="select * from cerv_cliente";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        rs = (OracleResultSet) pst.executeQuery();
+        while (rs.next())
+        {
+        String Nombres =rs.getString("CLI_NOMBRE");
+        String Apellidos =rs.getString("CLI_APELLIDO");
+        String Identificacion =rs.getString("CLI_ID");
+        String Pais = rs.getString("CLI_PAIS");
+        String Email = rs.getString("CLI_EMAIL");
+        String Direccion =rs.getString("CLI_DIR");
+        
+        Cliente cliente = new Cliente(Nombres, Apellidos, Identificacion, Direccion, Pais, Email);
+        Clitemp.add(cliente);
+        }
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+        CliT=Clitemp;
+    }
+    
+     public void CrearTienda()
+    {
+    ObservableList<Tienda> Tietemp = FXCollections.observableArrayList();
+        String sql="select * from cerv_tienda";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        rs = (OracleResultSet) pst.executeQuery();
+        while (rs.next())
+        {
+        String Pais =rs.getString("TIE_PAIS");
+        String Nombre =rs.getString("TIE_NOMBRE");
+        String Ciudad =rs.getString("TIE_CIUDAD");
+        String Contacto = rs.getString("TIE_CONTACTO");
+        String Id = rs.getString("TIE_ID");
+        
+        Tienda tienda = new Tienda(Pais, Nombre, Ciudad, Contacto, Id);
+        Tietemp.add(tienda);
+        }
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+        TieT=Tietemp;
+    }
+     
+     public void CrearPedido()
+    {
+    ObservableList<Pedido> Pedtemp = FXCollections.observableArrayList();
+        String sql="select * from cerv_pedido";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        rs = (OracleResultSet) pst.executeQuery();
+        while (rs.next())
+        {
+        String Cod_pedido =rs.getString("PED_CODIGO");
+        String Fecha =rs.getString("PED_FECHA");
+        String Cod_dep =rs.getString("DEP_CODIGO");
+        String Id_tie = rs.getString("TIE_ID");
+ 
+        
+        Pedido pedido = new Pedido(Cod_pedido, Fecha, Id_tie, Cod_dep);
+        Pedtemp.add(pedido);
+        }
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+        PedT=Pedtemp;
     }
     
 }
