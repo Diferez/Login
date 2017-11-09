@@ -333,13 +333,13 @@
                                        <children>
                                           <TableView fx:id="TabCer" layoutX="294.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                             <columns>
-                                                <TableColumn prefWidth="70.0" text="Nombre" />
-                                                <TableColumn text="Codigo" />
-                                                <TableColumn prefWidth="75.0" text="Tipo" />
-                                                <TableColumn prefWidth="75.0" text="Fabricante" />
-                                              <TableColumn prefWidth="75.0" text="Coste Fabricacion" />
-                                                <TableColumn prefWidth="75.0" text="\% Alcohol" />
-                                              <TableColumn prefWidth="273.0" text="Descripcion" />
+                                                <TableColumn fx:id="CNombre" prefWidth="70.0" text="Nombre" />
+                                                <TableColumn fx:id="CCodigo" text="Codigo" />
+                                                <TableColumn fx:id="CTipo" prefWidth="75.0" text="Tipo" />
+                                                <TableColumn fx:id="CFabricante" prefWidth="75.0" text="Fabricante" />
+                                              <TableColumn fx:id="CCoste" prefWidth="75.0" text="Coste Fabricacion" />
+                                                <TableColumn fx:id="CAlcohol" prefWidth="75.0" text="\% Alcohol" />
+                                              <TableColumn fx:id="CDescripcion" prefWidth="273.0" text="Descripcion" />
                                             </columns>
                                           </TableView>
                                        </children>

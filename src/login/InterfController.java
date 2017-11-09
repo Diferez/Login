@@ -15,7 +15,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javax.swing.JOptionPane;
 import oracle.jdbc.OraclePreparedStatement;
 import oracle.jdbc.OracleResultSet;
@@ -173,6 +176,40 @@ public class InterfController implements Initializable {
     private TextField TxCodM;
     @FXML
     private Button Btn_CrearM;
+    
+    
+    /*///////////////////
+    Pestaña Ver Cerveza  /////
+    /////////////////////
+    */
+    
+    
+    
+    @FXML
+    private TableView<Cerveza> TabCer;
+
+    @FXML
+    private TableColumn<Cerveza, String> CNombre;
+
+    @FXML
+    private TableColumn<Cerveza, String> CCodigo;
+
+    @FXML
+    private TableColumn<Cerveza, String> CTipo;
+
+    @FXML
+    private TableColumn<Cerveza, String> CFabricante;
+
+    @FXML
+    private TableColumn<Cerveza, Integer> CCoste;
+
+    @FXML
+    private TableColumn<Cerveza, Integer> CAlcohol;
+
+    @FXML
+    private TableColumn<Cerveza, String> CDescripcion;
+    
+    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
     
     
 
@@ -440,6 +477,7 @@ public class InterfController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         Poblarg();
+        Tablas();
         
     }
     
@@ -514,5 +552,47 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
             ChoiceBoxProO.setItems(ProP);
     }
     
+    public void Tablas()
+    {
+    CNombre.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CNombre"));
+    CCodigo.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CCodigo"));
+    CTipo.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CTipo"));
+    CFabricante.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CFabricante"));
+    CCoste.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CCoste"));
+    CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
+    CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
+    
+    
+    CrearCervezas();
+    TabCer.setItems(CerT);
+    
+    
+    }
+    
+    public void CrearCervezas()
+    {
+    ObservableList<Cerveza> Cervtemp = FXCollections.observableArrayList();
+        String sql="select * from cerv_cerveza";
+        try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        rs = (OracleResultSet) pst.executeQuery();
+        while (rs.next())
+        {
+        String Nombre=rs.getString("CER_NOMBRE");
+        String Codigo=rs.getString("CER_CODIGO");
+        String Tipo=rs.getString("CER_TIPO");
+        String Fabricante=rs.getString("FAB_NOMBRE");
+        String Descripcion=rs.getString("CER_DESCRIP");
+        Integer Grado=rs.getInt("CER_GRADO");
+        Integer Precio=rs.getInt("CER_PRECIO");
+        
+        Cerveza a=new Cerveza(Nombre,Codigo,Tipo,Fabricante,Precio,Grado,Descripcion);
+        Cervtemp.add(a);
+        }
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }
+        CerT=Cervtemp;
+    }
     
 }
