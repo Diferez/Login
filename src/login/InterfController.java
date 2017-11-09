@@ -27,6 +27,7 @@ import oracle.jdbc.OracleResultSet;
  */
 public class InterfController implements Initializable {
     ObservableList<String> TienT = FXCollections.observableArrayList();
+     ObservableList<String> ProP = FXCollections.observableArrayList();
     ObservableList<String> DepD = FXCollections.observableArrayList();
     ObservableList<String> FabC = FXCollections.observableArrayList();
     Connection conn= Conectar.Cone();;
@@ -147,8 +148,6 @@ public class InterfController implements Initializable {
     private ChoiceBox ChoiceBoxProO;
     @FXML
     private Button Btn_CrearO;
-    @FXML
-    void CrearO(ActionEvent event) { }
     
     
     /*///////////////////
@@ -356,6 +355,29 @@ public class InterfController implements Initializable {
         
     }
     //--------------CREAR ORDEN----------------//
+    @FXML
+    void CrearO(ActionEvent event) { 
+        String sql = "insert into CERV_ORDEN (ORD_CODIGO, PRO_CODIGO, FAB_NOMBRE) values (?, ?, ?)";
+        
+         try{
+        pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+        
+        //Enviar la informacion a la base de datos
+        pst.setString(1, TxCodO.getText());
+        pst.setString(2, ChoiceBoxProO.getValue().toString());
+        pst.setString(3, ChoiceBoxNomFabO.getValue().toString());
+        
+        rs = (OracleResultSet) pst.executeQuery();
+        
+        JOptionPane.showMessageDialog(null, "¡Enhorabuena! La orden se ha registrado con éxito.");
+        
+        //Limpiar textfields
+        TxCodO.clear();
+        
+        }catch(Exception E){
+        JOptionPane.showMessageDialog(null, E);
+        }         
+    }
     
     
     //--------------CREAR PROVEEDOR---------------//
@@ -474,6 +496,22 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
         }
         DepD=Deptemp;
         ChoiceBoxNomDP.setItems(DepD);
+        
+        ObservableList<String> Protemp = FXCollections.observableArrayList();
+            sql="select * from cerv_proveedor";
+            try{
+            pst = (OraclePreparedStatement) conn.prepareStatement(sql);
+            rs = (OracleResultSet) pst.executeQuery();
+            while (rs.next())
+            {
+            String Fabnombre=rs.getString("PRO_CODIGO");
+            Protemp.add(Fabnombre);
+            }
+            }catch(Exception E){
+            JOptionPane.showMessageDialog(null, E);
+            }
+            ProP=Protemp;
+            ChoiceBoxProO.setItems(ProP);
     }
     
     
