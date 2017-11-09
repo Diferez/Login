@@ -39,7 +39,7 @@
                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Nombre de la fabrica" />
+                                                <Label text="Nombre de la fábrica" />
                                                 <TextField fx:id="TxNomFabF" GridPane.columnIndex="1" />
                                                 <Button fx:id="Btn_CrearF" mnemonicParsing="false" onAction="#CrearF" prefHeight="26.0" prefWidth="75.0" text="Crear" GridPane.rowIndex="1" />
                                              </children>
@@ -107,9 +107,9 @@
                                              <children>
                                                 <Label text="Nombres" />
                                                 <Label text="Apellidos" GridPane.rowIndex="1" />
-                                                <Label text="Numero de identificacion" GridPane.rowIndex="2" />
-                                                <Label text="Pais" GridPane.rowIndex="3" />
-                                                <Label text="Direccion" GridPane.rowIndex="4" />
+                                                <Label text="Número de identificación" GridPane.rowIndex="2" />
+                                                <Label text="País" GridPane.rowIndex="3" />
+                                                <Label text="Dirección" GridPane.rowIndex="4" />
                                                 <Label text="Correo" GridPane.rowIndex="5" />
                                                 <TextField fx:id="TxNomCl" GridPane.columnIndex="1" />
                                                 <TextField fx:id="TxApeCl" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -124,7 +124,7 @@
                                     </AnchorPane>
                               </content>
                             </Tab>
-                            <Tab text="Deposito">
+                            <Tab text="Depósito">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -141,9 +141,9 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Codigo del deposito" />
-                                                <Label text="Fabrica relacionada" GridPane.rowIndex="1" />
-                                                <Label text="Direccion" GridPane.rowIndex="2" />
+                                                <Label text="Código del depósito" />
+                                                <Label text="Fábrica relacionada" GridPane.rowIndex="1" />
+                                                <Label text="Dirección" GridPane.rowIndex="2" />
                                                 <Label text="Capacidad" GridPane.rowIndex="3" />
                                                 <TextField fx:id="TxCodD" GridPane.columnIndex="1" />
                                                 <TextField fx:id="TxDirD" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -174,9 +174,9 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Pais" />
+                                                <Label text="País" />
                                                 <Label text="Nombre" GridPane.rowIndex="1" />
-                                                <Label text="Identificacion de La Tienda " GridPane.rowIndex="2" />
+                                                <Label text="Identificación de La Tienda " GridPane.rowIndex="2" />
                                                 <Label text="Ciudad" GridPane.rowIndex="3" />
                                                 <Label text="Contacto" GridPane.rowIndex="4" />
                                                 <TextField fx:id="TxPaiT" GridPane.columnIndex="1" />
@@ -209,9 +209,9 @@
                                             </rowConstraints>
                                              <children>
                                                 <Label />
-                                                <Label text="Identificacion de Tienda" GridPane.rowIndex="1" />
-                                                <Label text="Codigo del Pedido" />
-                                                <Label text="Nombre del Deposito" GridPane.rowIndex="2" />
+                                                <Label text="Identificación de Tienda" GridPane.rowIndex="1" />
+                                                <Label text="Código del Pedido" />
+                                                <Label text="Nombre del Depósito" GridPane.rowIndex="2" />
                                                 <Label text="Fecha" GridPane.rowIndex="3" />
                                                 <TextField fx:id="TxCodP" GridPane.columnIndex="1" />
                                                 <TextField fx:id="TxFechaP" GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -241,9 +241,9 @@
                                             </rowConstraints>
                                              <children>
                                                 <Label />
-                                                <Label text="Codigo orden" GridPane.rowIndex="1" />
+                                                <Label text="Código orden" GridPane.rowIndex="1" />
                                                 <Label text="Proveedor" GridPane.rowIndex="2" />
-                                                <Label text="Nombre Fabrica" />
+                                                <Label text="Nombre Fábrica" />
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
                                                 <Button fx:id="Btn_CrearO" mnemonicParsing="false" onAction="#CrearO" prefHeight="25.0" prefWidth="111.0" text="Crear" GridPane.rowIndex="3" />
                                                 <TextField fx:id="TxCodO" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -270,8 +270,8 @@
                                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Label text="Codigo del proveedor" />
-                                                <Label text="Direccion" GridPane.rowIndex="1" />
+                                                <Label text="Código del proveedor" />
+                                                <Label text="Dirección" GridPane.rowIndex="1" />
                                                 <Button fx:id="Btn_CrearPro" mnemonicParsing="false" onAction="#CrearPro" prefHeight="25.0" prefWidth="98.0" text="Crear" GridPane.rowIndex="2" />
                                                 <TextField fx:id="TxProCodPro" GridPane.columnIndex="1" />
                                                 <TextField fx:id="TxDirPro" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -299,7 +299,7 @@
                                              <children>
                                                 <Label text="Precio" />
                                                 <Label text="Nombre" GridPane.rowIndex="1" />
-                                                <Label text="Codigo" GridPane.rowIndex="2" />
+                                                <Label text="Código" GridPane.rowIndex="2" />
                                                 <Button fx:id="Btn_CrearM" mnemonicParsing="false" onAction="#CrearM" prefHeight="25.0" prefWidth="121.0" text="Create" GridPane.rowIndex="3" />
                                                 <TextField fx:id="TxPreM" GridPane.columnIndex="1" />
                                                 <TextField fx:id="TxNomM" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -325,7 +325,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TabPane prefHeight="373.0" prefWidth="788.0" tabClosingPolicy="UNAVAILABLE">
+                        <TabPane layoutX="-14.0" layoutY="3.0" prefHeight="376.0" prefWidth="788.0" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
                             <Tab text="Cerveza">
                               <content>
@@ -334,12 +334,12 @@
                                           <TableView fx:id="TabCer" layoutX="294.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                                             <columns>
                                                 <TableColumn fx:id="CNombre" prefWidth="70.0" text="Nombre" />
-                                                <TableColumn fx:id="CCodigo" text="Codigo" />
+                                                <TableColumn fx:id="CCodigo" text="Código" />
                                                 <TableColumn fx:id="CTipo" prefWidth="75.0" text="Tipo" />
                                                 <TableColumn fx:id="CFabricante" prefWidth="75.0" text="Fabricante" />
                                               <TableColumn fx:id="CCoste" prefWidth="75.0" text="Coste Fabricacion" />
                                                 <TableColumn fx:id="CAlcohol" prefWidth="75.0" text="\% Alcohol" />
-                                              <TableColumn fx:id="CDescripcion" minWidth="0.0" prefWidth="200.79998779296875" text="Descripcion" />
+                                              <TableColumn fx:id="CDescripcion" minWidth="0.0" prefWidth="200.79998779296875" text="Descripción" />
                                                 <TableColumn fx:id="CEliminar" prefWidth="75.20001220703125" text="Eliminar" />
                                             </columns>
                                           </TableView>
@@ -347,11 +347,92 @@
                                     </AnchorPane>
                               </content>
                             </Tab>
-                            <Tab text="Untitled Tab 2">
+                            <Tab text="Cliente">
                               <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TabCer1" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNombre1" prefWidth="85.0" text="Nombres" />
+                                                <TableColumn fx:id="CCodigo1" prefWidth="87.0" text="Apellidos" />
+                                                <TableColumn fx:id="CTipo1" prefWidth="97.0" text="Identificación" />
+                                                <TableColumn fx:id="CFabricante1" prefWidth="124.0" text="Dirección" />
+                                                <TableColumn fx:id="CCoste1" prefWidth="118.0" text="País" />
+                                                <TableColumn fx:id="CAlcohol1" prefWidth="164.0" text="Email" />
+                                                <TableColumn fx:id="CEliminar1" prefWidth="52.0" text="Eliminar" />
+                                             </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
                               </content>
                             </Tab>
+                              <Tab text="Tienda">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TabCer11" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNombre11" minWidth="0.0" prefWidth="105.0" text="Nombre" />
+                                                <TableColumn fx:id="CCodigo11" minWidth="0.0" prefWidth="131.0" text="Identificación" />
+                                                <TableColumn fx:id="CTipo11" prefWidth="146.0" text="País" />
+                                                <TableColumn fx:id="CNombre111" prefWidth="116.0" text="Ciudad" />
+                                                <TableColumn fx:id="CNombre1111" prefWidth="160.0" text="Contacto" />
+                                                <TableColumn fx:id="CNombre11111" prefWidth="69.0" text="Eliminar" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Depósito">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TabCer111" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNombre111" minWidth="0.0" prefWidth="159.0" text="Nombre" />
+                                                <TableColumn fx:id="CCodigo111" minWidth="0.0" prefWidth="198.0" text="Código" />
+                                                <TableColumn fx:id="CTipo111" prefWidth="88.0" text="Capacidad" />
+                                                <TableColumn fx:id="CTipo1111" prefWidth="218.0" text="Ubicación" />
+                                                <TableColumn fx:id="CNombre111111" prefWidth="64.0" text="Eliminar" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Pedido">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TabCer1111" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNombre1112" minWidth="0.0" prefWidth="164.0" text="Código Pedido" />
+                                                <TableColumn fx:id="CCodigo1111" minWidth="0.0" prefWidth="211.0" text="Identificación Tienda" />
+                                                <TableColumn fx:id="CTipo1111" prefWidth="160.0" text="Código Depósito" />
+                                                <TableColumn fx:id="CTipo11111" prefWidth="113.0" text="Fecha" />
+                                                <TableColumn fx:id="CNombre1111111" prefWidth="79.0" text="Eliminar" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Orden">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TabCer11111" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNombre11121" minWidth="0.0" prefWidth="172.0" text="Código de Orden" />
+                                                <TableColumn fx:id="CCodigo11111" minWidth="0.0" prefWidth="199.0" text="Código del Proveedor" />
+                                                <TableColumn fx:id="CTipo11111" prefWidth="256.0" text="Nombre Fábrica" />
+                                                <TableColumn fx:id="CNombre11111111" prefWidth="100.0" text="Eliminar" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
                           </tabs>
                         </TabPane>
                      </children></AnchorPane>
