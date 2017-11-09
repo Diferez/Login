@@ -577,12 +577,12 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
       }
     });
     
-//    CEliminar.setCellFactory(new Callback<TableColumn<Cerveza, Boolean>, TableCell<Cerveza, Boolean>>() {
-//      @Override public TableCell<Cerveza, Boolean> call(TableColumn<Cerveza, Boolean> personBooleanTableColumn) {
-//        return new EliminarCell(stage, table);
-//        
-//      }
-//    });
+    CEliminar.setCellFactory(new Callback<TableColumn<Cerveza, Boolean>, TableCell<Cerveza, Boolean>>() {
+      @Override public TableCell<Cerveza, Boolean> call(TableColumn<Cerveza, Boolean> personBooleanTableColumn) {
+        return new EliminarCell(TabCer);
+       
+      }
+    });
     
     
     
