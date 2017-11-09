@@ -217,6 +217,7 @@ public class InterfController implements Initializable {
     
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     /*///////////////////
     Pestaña Ver Cliente /
     /////////////////////
@@ -280,6 +281,9 @@ public class InterfController implements Initializable {
     
     @FXML
     private TableView<Orden> Orden;
+=======
+    public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
+>>>>>>> parent of 2915885... m+as tablas
 =======
     public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
 >>>>>>> parent of 2915885... m+as tablas
@@ -637,6 +641,7 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
     CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     /*-----------------------CLIENTES--------------------------*/
     CliNombres.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliNombres"));
@@ -661,6 +666,8 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     
   
    
+=======
+>>>>>>> parent of 2915885... m+as tablas
 =======
 >>>>>>> parent of 2915885... m+as tablas
     
