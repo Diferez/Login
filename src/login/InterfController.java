@@ -251,9 +251,9 @@ public class InterfController implements Initializable {
     Pestaña Ver Pedido //
     /////////////////////
     */
-     public ObservableList<Tienda> PedT = FXCollections.observableArrayList();
+     public ObservableList<Pedido> PedT = FXCollections.observableArrayList();
      @FXML
-    private TableView<Tienda> TabPed;
+    private TableView<Pedido> TabPed;
     @FXML
     private TableColumn<Pedido, String> Ped_Codigo;
     @FXML
@@ -610,6 +610,8 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
             }
             ProP=Protemp;
             ChoiceBoxProO.setItems(ProP);
+            
+            
     }
     
     public void Tablas()
@@ -632,11 +634,11 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CliEmail.setCellValueFactory(new PropertyValueFactory<Cliente,String>("CliEmail"));
     
     /*-----------------------TIENDAS--------------------------*/
-    Tie_Pais.setCellValueFactory(new PropertyValueFactory<Tienda,SStringtritg>("Tie_Pais"));
-    Tie_Nombre.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Nombre"));
-    Tie_Ciudad.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Ciudad"));
-    Tie_Contacto.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Contacto"));
-    Tie_Id.setCellValueFactory(new PropertyValueFactory<Tienda,Stritg>("Tie_Id"));
+    Tie_Pais.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Pais"));
+    Tie_Nombre.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Nombre"));
+    Tie_Ciudad.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Ciudad"));
+    Tie_Contacto.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Contacto"));
+    Tie_Id.setCellValueFactory(new PropertyValueFactory<Tienda,String>("Tie_Id"));
     
     /*-----------------------PEDIDOS--------------------------*/
     Ped_Codigo.setCellValueFactory(new PropertyValueFactory<Pedido,String>("Ped_Codigo"));
