@@ -214,8 +214,7 @@ public class InterfController implements Initializable {
     @FXML
     private TableColumn<Cerveza, String> CDescripcion;
     
-    @FXML
-    private TableColumn<Cerveza, Boolean> CEliminar;
+    
     
     public ObservableList<Cerveza> CerT = FXCollections.observableArrayList();
     
@@ -569,20 +568,7 @@ ObservableList<String> Tientemp = FXCollections.observableArrayList();
     CCoste.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CCoste"));
     CAlcohol.setCellValueFactory(new PropertyValueFactory<Cerveza,Integer>("CAlcohol"));
     CDescripcion.setCellValueFactory(new PropertyValueFactory<Cerveza,String>("CDescripcion"));
-    CEliminar.setSortable(false);
     
-    CEliminar.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Cerveza, Boolean>, ObservableValue<Boolean>>() {
-      @Override public ObservableValue<Boolean> call(TableColumn.CellDataFeatures<Cerveza, Boolean> features) {
-        return new SimpleBooleanProperty(features.getValue() != null);
-      }
-    });
-    
-    CEliminar.setCellFactory(new Callback<TableColumn<Cerveza, Boolean>, TableCell<Cerveza, Boolean>>() {
-      @Override public TableCell<Cerveza, Boolean> call(TableColumn<Cerveza, Boolean> personBooleanTableColumn) {
-        return new EliminarCell(TabCer);
-       
-      }
-    });
     
     
     
